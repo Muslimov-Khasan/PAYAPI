@@ -1,0 +1,177 @@
+.pricing .container {
+    margin-bottom: 96px;
+    padding-top: 72px;
+}
+
+.pricing__heading {
+    margin-bottom: 72px;
+    font-size: 56px;
+    line-height: 56px;
+    color: $juan-blue;
+}
+
+.pricing__list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.pricing__item {
+    max-width: 350px;
+    width: 100%;
+
+    & + & {
+        margin-left: 24px;
+    }
+}
+
+.pricing__item__heading {
+    font-family: $font-heading;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 40px;
+    color: $dark-pink;
+}
+
+.prcing__item__text {
+    margin-bottom: 8px;
+    line-height: 28px;
+    color: $light-juan-blue;
+}
+
+.pricing__item strong {
+    display: block;
+    margin-bottom: 24px;
+    font-family: $font-heading;
+    font-size: 56px;
+    line-height: 72px;
+    color: $juan-blue;
+}
+
+.pricing__item__sublist {
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 24px 0;
+    list-style-type: none;
+    border-top: 1px solid rgba(54, 83, 107, 0.25);
+    border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+}
+
+.pricing__sublist__item {
+    font-size: 16px;
+    line-height: 28px;
+
+    & + & {
+        margin-top: 8px;
+    }
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 8px;
+        margin-right: 24px;
+        background-image: url("../../images/svg/vector-pink.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &--disabled {
+        opacity: 0.5;
+
+        &::before {
+            background-image: none;
+        }
+    }
+}
+
+.pricing__item__link {
+    display: block;
+    width: 168px;
+    padding: 15px;
+    line-height: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: $juan-blue;
+    white-space: nowrap;
+    border: 1px solid $juan-blue;
+    border-radius: 25px;
+    transition: background-color $transition, color $transition;
+
+    &:hover{
+        background-color: $juan-blue;
+        color: $water-white;
+    }
+}
+
+@media only screen and(max-width: 900px) {
+    .pricing {
+        text-align: center;
+    }
+
+    .pricing__item {
+        max-width: 223px;
+        width: 100%;
+
+        strong {
+            font-size: 48px;
+            line-height: 72px;
+        }
+
+        & + & {
+            margin-left: 10px;
+        }
+    }
+
+    .pricing__item__heading {
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .pricing__item__link {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and(max-width: 680px) {
+    .pricing .container{
+        margin-bottom: 80px;
+    }
+
+    .pricing__list {
+        flex-direction: column;
+    }
+
+    .pricing__heading {
+        margin-bottom: 48px;
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .pricing__item {
+        & + & {
+            margin-left: 0;
+            margin: 0 auto;
+        }
+
+        margin: 0 auto;
+
+        strong {
+            font-size: 56px;
+            line-height: 72px;
+        }
+    }
+
+    .pricing__item + .pricing__item {
+        margin-top: 48px;
+    }
+
+    .pricing__item__heading {
+        margin-bottom: 24px;
+        line-height: 32px;
+    }
+}

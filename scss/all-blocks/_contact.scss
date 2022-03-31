@@ -1,0 +1,181 @@
+.contact .container {
+    padding-top: 82px;
+    margin-bottom: 93px;
+}
+
+.contact__heading {
+    max-width: 730px;
+    margin-bottom: 60px;
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -0.430769px;
+}
+
+.contact__aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact__form {
+    max-width: 445px;
+    width: 100%;
+    margin-right: 32px;
+}
+
+.contact__input {
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 16px 20px;
+    padding-top: 0;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.115385px;
+    color: $juan-blue;
+    border: none;
+    border-bottom: 1px solid $juan-blue;
+    outline: none;
+    background-color: transparent;
+    opacity: 0.5;
+    transition: opacity $transition;
+
+    &::placeholder {
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: -0.115385px;
+        text-transform: capitalize;
+        color: $juan-blue;
+    }
+
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.contact__message {
+    height: 90px;
+    resize: none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+.contact__check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    cursor: pointer;
+
+    &__controller {
+        display: block;
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        margin-right: 26px;
+        background-color: $juan-blue;
+        opacity: 0.25;
+        transition: background-color $transition, opacity $transition;
+    }
+
+    &__checkbox:checked + &__controller {
+        background-color: $dark-pink;
+        opacity: 1;
+        background-image: url("../images/svg/vector.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__text {
+        max-width: 395px;
+        line-height: 25px;
+    }
+}
+
+.contact__button {
+    width: 152px;
+    padding: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.115385px;
+    border: 1px solid $juan-blue;
+    border-radius: 24px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color $transition, color $transition;
+
+    &:hover {
+        background-color: $juan-blue;
+        color: $water-white;
+    }
+}
+
+.contact__about__heading {
+    max-width: 445px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-family: $font-heading;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    opacity: 0.75;
+}
+
+.contact .about__list {
+    margin: 0 auto;
+}
+
+@media only screen and(max-width: 980px) {
+    .contact .container {
+        margin-bottom: 100px;
+    }
+
+    .contact__heading {
+        max-width: 485px;
+        margin: 0 auto;
+        margin-bottom: 54px;
+        font-size: 48px;
+        line-height: 56px;
+        text-align: center;
+    }
+    .contact__aside {
+        flex-direction: column;
+    }
+
+    .contact__form {
+        margin: 0;
+        margin-bottom: 64px;
+    }
+
+    .contact__about__heading {
+        margin: 0 auto;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+
+@media only screen and(max-width: 500px) {
+    .contact .container {
+        margin-bottom: 80px;
+    }
+
+    .contact__heading {
+        max-width: 330px;
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .contact__form {
+        margin-bottom: 80px;
+    }
+}
+
+@media only screen and(max-width: 340px) {
+    .contact__heading {
+        max-width: 280px;
+        font-size: 28px;
+        line-height: 32px;
+    }
+}
